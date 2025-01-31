@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="note.reg.do" method="post" enctype="multipart/form-data" 
+			onsubmit="return noteRegCheck(this);">
+		<table id="regTbl">
+			<tr>
+				<td id="titleArea" align="left">
+					<input name="title" id="title" placeholder="제목을 입력하세요">
+				</td>
+				<td id="iconArea">
+					<table>
+						<tr>
+							<td class="label">ICON</td>
+							<td><input name="icon2" type="file" id="icon"></td>
+						</tr>
+						<tr>
+							<td class="label">노트 색상</td>
+							<td>#<input name="color" id="color" maxlength="6" placeholder="000000"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="radio" name="category" value="it" checked="checked">IT
+					<input type="radio" name="category" value="book">BOOK
+					<input type="radio" name="category" value="memo">MEMO boot
+					<input type="radio" name="category" value="else">ELSE
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" id="txtArea" align="center">
+					<textarea name="txt" id="txt" maxlength="900" placeholder="note"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center">
+					<button>reg</button>
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

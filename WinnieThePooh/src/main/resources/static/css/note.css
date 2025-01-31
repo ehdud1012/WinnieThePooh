@@ -1,0 +1,270 @@
+@charset "UTF-8";
+.noteTbl {
+	color: #5a4f41;
+	font-family: "k";
+	font-size: 23px;
+	width: 100%;
+}
+.noteTbl th {
+	font-size: 40px;
+	padding-bottom: 10px;
+}
+.noteTbl #regTd {
+	width: 45px;
+}
+.noteTbl .noteRegArea{
+	width: 100%;
+	margin-bottom: 20px;
+}
+.noteTbl .goReg {
+	width: 30px;
+}
+.noteTbl .reg {
+	width: 35px;
+	padding: 4px;
+	font-size: 13px;
+	border-radius: 10px;
+	border: none;
+	color: #EEE5D3;
+	background-color: #BFA688;
+	font-family: "k";
+}
+.noteArea{
+	width: 90%;
+}
+.noteArea .folder{
+	width: 90%;
+	margin: 4px;
+}
+.noteArea .folder th{
+	font-size: 30px;
+	padding: 0px;
+}
+.noteArea .folder img{
+	width: 100%;
+}
+
+.noteArea .notes{
+	width: 24%;
+	margin:4px;
+	float: left;
+	height: 200px;
+	padding: 35px;
+	border-radius: 10px;
+	white-space: nowrap;
+}
+.notes .noteIcon{
+	max-width: 80%;
+}
+.notes .space{
+	height: 10px;
+	background-color: transparent;
+}
+.notes .title{
+	background-color: white;
+	border-radius: 10px;
+}
+
+
+#regTbl{
+	width: 100%;
+}
+#regTbl #titleArea{
+	width: 70%;
+}
+#regTbl #titleArea #title{
+	font-family: "k";
+	width: 97%;
+	border: none;
+	height: 80px;
+	border-radius: 5px;
+	background-color: #BFA688;
+	font-size: 30px;
+	outline: none;
+	padding: 10px;
+	padding-left: 4px;
+}
+
+#regTbl #iconArea{
+	width: 30%;
+	border: #BFA688 solid 3px;
+	border-radius: 5px;
+	padding: 5px;
+	height: 80px;
+	font-size: 20px;
+	background-image: url("../img/opercity.png");
+	background-attachment: fixed;
+	background-size: cover;
+}
+#regTbl #iconArea #icon{
+	width: 73%;
+	font-family: "k";
+	border: none;
+	background-color: transparent;
+}
+
+#iconArea .label {
+	width: 27%;
+}
+#regTbl #iconArea #color{
+	width: 73%;
+	font-family: "k";
+	font-size: 20px;
+	color: #5a4f41;
+	padding: 5px;
+	border: none;
+	margin-top: 5px;
+	background-color: transparent;
+	outline: #BFA688;
+}
+#regTbl #txtArea{
+	width: 100%;
+}
+#regTbl #txtArea #txt{
+	font-family: "k";
+	width: 99%;
+	height: 630px;
+	outline: none;
+	border: #BFA688 solid 2px;
+	border-radius: 5px;
+	font-size: 20px;
+	padding-left: 10px;
+	margin-top: 10px;
+	resize: none;
+	background-color: transparent;
+	background-image: url("../img/opercity.png");
+	background-attachment: fixed;
+	background-size: cover;
+}
+#regTbl button {
+	margin-top: 20px;
+	width:250px;
+	height: 40px;
+	font-size: 30px;
+	border-radius: 10px;
+	color: #EEE5D3;
+	font-family: "k";
+	background-color: #BFA688;
+	border: none;
+}
+#updateTbl {
+	width: 100%;
+}
+#updateTbl #titleArea{
+	width: 90%;
+}
+#updateTbl #titleArea #title{
+	font-family: "k";
+	width: 97%;
+	border: none;
+	height: 80px;
+	border-radius: 5px;
+	background-color: #BFA688;
+	font-size: 30px;
+	outline: none;
+	padding: 10px;
+	padding-left: 4px;
+}
+#updateTbl #iconArea{
+	width: 90%;
+}
+#updateTbl #iconArea #iconTbl {
+	width: 97%;
+	font-size: 20px;
+	background-image: url("../img/opercity.png");
+	background-attachment: fixed;
+	background-size: cover;
+}
+#iconTbl .label {
+	width: 20%;
+}
+#iconTbl #color {
+	width: 60%;
+	font-family: "k";
+	font-size: 20px;
+	color: #5a4f41;
+	padding: 5px;
+	border: none;
+	margin-top: 5px;
+	background-color: transparent;
+	outline: #BFA688;
+}
+#iconTbl #iconInput {
+	width: 60%;
+	font-family: "k";
+	font-size: 20px;
+}
+#updateTbl #iconArea #icon {
+	width: 20%;
+	font-family: "k";
+}
+#updateTbl #iconArea img {
+	max-width: 100px;
+}
+#updateTbl #txtArea #txt{
+	font-family: "k";
+	width: 97%;
+	height: 630px;
+	outline: none;
+	border: #BFA688 solid 2px;
+	border-radius: 5px;
+	font-size: 20px;
+	padding-left: 10px;
+	margin-top: 10px;
+	resize: none;
+	background-color: transparent;
+	background-image: url("../img/opercity.png");
+	background-attachment: fixed;
+	background-size: cover;
+}
+#updateTbl button {
+	margin-top: 20px;
+	width:250px;
+	height: 40px;
+	font-size: 30px;
+	border-radius: 10px;
+	color: #EEE5D3;
+	font-family: "k";
+	background-color: #BFA688;
+	border: none;
+}
+#plusCateBtn {
+	width: 70px;
+	padding: 4px;
+	font-size: 20px;
+	border-radius: 10px;
+	border: none;
+	color: #EEE5D3;
+	background-color: #BFA688;
+	font-family: "k";
+}
+#plusCateTbl {
+	width: 80px;
+	padding: 4px;
+	font-size: 20px;
+	border-radius: 10px;
+	border: none;
+	color: #EEE5D3;
+	background-color: #BFA688;
+	font-family: "k";
+}
+#plusCateTbl #plusCate{
+	width: 170px;
+	font-family: "k";
+	font-size: 20px;
+	margin : 3px;
+	outline: none;
+	border: none;
+	background-color: transparent;
+	color: #5a4f41;
+}
+#plusCateTbl button {
+	width: 40px;
+	padding: 4px;
+	font-size: 20px;
+	border-radius: 10px;
+	border: none;
+	color: #EEE5D3;
+	background-color: #BFA688;
+	font-family: "k";
+}

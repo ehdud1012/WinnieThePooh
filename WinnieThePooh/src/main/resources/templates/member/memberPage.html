@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table id="myPageTbl">
+		<tr>
+			<th>♥ [[${session.loginMember.name}]] PAGE ♥</th>
+		</tr>
+		<tr>
+			<td class="label">GALLERY POST</td>
+		</tr>
+		<tr>
+			<td>
+				<table th:each="g : ${memberGalleryPost}" class="galleryPostsTbl">
+					<tr>
+						<td align="center">
+							<img class="postPhoto" th:src="|gallery.photo.folder/${g.photo}|">
+						</td>
+					</tr>
+					<tr>
+						<td class="title">
+							[[${g.title }]]
+						</td>
+					</tr>
+					<tr>
+						<td class="date" align="right" 
+							th:text="${#dates.format(g.date, 'yyyy-MM-dd')}">
+						</td>
+					</tr>
+				</table>
+			</td>	
+		</tr>
+		<tr>
+			<td class="label">SNS POST</td>
+		</tr>
+		<tr>
+			<td align="center">
+				<table th:each="s : ${memberSnsPost}" class="snsPostsTbl" th:style="|box-shadow: 5px 5px 5px #${s.color}|">
+					<tr>
+						<td>
+							<table class="postTitleArea">
+								<tr>
+									<td align="right">
+											<button th:onclick="snsPostUpdate([[${s.no}]], [[${s.txt}]]);">
+												<img class="icon" src="img/icon/modify.png">
+											</button>
+											<button th:onclick="snsPostDelete([[${s.no}]]);">
+												<img class="icon" src="img/icon/delete2.png">
+											</button>
+									</td>
+								</tr>
+								<tr><td th:text="${#dates.format(s.date, 'yyyy-MM-dd HH:mm')}" class="date" align="right" colspan="2"></td></tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td class="txt" th:utext="${s.txt}"></td>
+					</tr>
+					<tr>
+						<td align="center">
+							<div th:style="|border-bottom: #${s.color} solid 2px|" 
+							class="snsLine" ></div>
+						</td>
+					</tr>
+					<tr>
+						<td align="center">
+							<table class="replyTbl" th:style="|color: #${s.color}|" >
+								<tr>
+									<td>
+										<div>댓글</div>
+									</td>
+								</tr>
+								<tr>
+									<td align="center">
+										<form action="" name="replyReg" onsubmit="return snsReplyWriteCheck();">
+											<table class="replyInputArea">
+												<tr>
+													<td>
+														<input name="token" value="${token }" type="hidden">
+														<input name="no" value="${s.no }" type="hidden">
+														<span>[[${session.loginMember.id}]]</span>
+														<input class="replyInput" name="txt" maxlength="80"
+																th:style="|border-bottom: #${s.color} solid 2px|">
+														<button><img class="icon" src="img/icon/keyboard.png"></button> <p>
+													</td>
+												</tr>
+											</table>
+										</form>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>	
+		</tr>
+	</table>
+</body>
+</html>
