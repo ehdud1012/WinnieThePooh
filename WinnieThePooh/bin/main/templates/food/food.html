@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table id="foodTbl">
+		<tr>
+			<th colspan="2">FOOD REVIEW</th>
+		</tr>
+		<tr>
+			<td align="right" id="a">
+				<button id="goUpload" th:if="${session.loginMember != null}">
+					업로드하러가기</button>
+			</td>
+		</tr>
+		<tr>
+			<td align="center" colspan="2">
+				<div id="foodPostArea">
+					<table class="foodPostTbl">
+						<tr>
+							<td align="center">
+							<img class="foodPostImg" src="img/honey.png"></td>
+						</tr>
+						<tr>
+							<td>별점</td>
+						</tr>
+						<tr>
+							<td>장소이름</td>
+						</tr>
+					</table>
+				</div>
+			</td>
+		</tr>
+	</table>
+	<form id="foodUploadForm" method="post" enctype="multipart/form-data">
+		<table id="foodUploadTbl" th:if="${session.loginMember != null}">
+			<tr>
+				<th>UPLOAD</th>
+			</tr>
+			<tr>
+				<td align="left">
+					&nbsp;&nbsp;장소 이름 <br> <input name="name" id="name">
+				</td>
+			</tr>
+			<tr>
+				<td align="left">
+					<textarea name="review" id="review" maxlength="160" placeholder="리뷰 내용"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td align="left">
+					&nbsp;&nbsp;사진 업로드 <br> 
+					<input name="photo2" id="photo" type="file">
+				</td>
+			</tr>
+			<tr>
+				<td align="left">&nbsp;&nbsp;평점<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+					<input type="radio" name="score" value="1" checked="checked">1 
+					<input type="radio" name="score" value="2">2 
+					<input type="radio" name="score" value="3">3 
+					<input type="radio" name="score" value="4">4 
+					<input type="radio" name="score" value="5">5
+				</td>
+			</tr>
+		</table>
+	</form>
+	<button id="foodRegBtn">등록</button>
+</body>
+</html>
