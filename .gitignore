@@ -10,8 +10,8 @@
 *.jar
 
 # 🔸 환경 설정 파일 (보안 위험)
-/src/main/resources/application.properties
-/src/main/resources/application.yml
+**/src/main/resources/application.properties
+**/src/main/resources/application.yml
 /.env
 
 # 🔸 개발 환경 관련 파일 제외 (STS, IntelliJ, VSCode)
