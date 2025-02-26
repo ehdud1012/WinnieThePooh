@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+#ballgameTbl {
+	width: 100%;
+}
+
+#ballgameTbl th {
+	font-size: 40px;
+	padding-bottom: 20px;
+}
+
+#ballgameTbl button {
+	width: 45%;
+	height: 650px;
+}
+
+canvas {
+	border: black solid 3px;
+}

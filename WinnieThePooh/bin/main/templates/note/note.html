@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table class="noteTbl">
+		<tr>
+			<th>NOTE</th>
+		</tr>
+		<tr>
+			<td align="right">
+				<table class="noteRegArea">
+					<tr>
+						<td align="right">
+							<button id="plusCateBtn">폴더추가</button>
+						</td>
+						<td align="right" id="regTd">
+							<form action="note.reg.go" th:if="${session.loginMember != null}">
+								<button class="reg">
+									<img class="goReg" src="img/icon/note.png">
+								</button>
+							</form>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">
+				<table class="noteArea">
+					<tr>
+						<td align="center">
+							<table class="folder" onclick="goFolder('it');">
+								<tr>
+									<td align="center">
+										<img src="img/icon/folder/folder_1.png">
+									</td>
+								</tr>
+								<tr>
+									<th>
+										IT
+									</th>	
+								</tr>
+							</table>
+						</td>
+						<td align="center">
+							<table class="folder" onclick="goFolder('book');">
+								<tr>
+									<td>
+										<img src="img/icon/folder/folder_2.png">
+									</td>
+								</tr>
+								<tr>
+									<th>
+										BOOK
+									</th>	
+								</tr>
+							</table>
+						</td>
+						<td align="center">
+							<table class="folder" onclick="goFolder('meno');">
+								<tr>
+									<td>
+										<img src="img/icon/folder/folder_3.png">
+									</td>
+								</tr>
+								<tr>
+									<th>
+										MEMO
+									</th>	
+								</tr>
+							</table>
+						</td>
+						<td align="center">
+							<table class="folder" onclick="goFolder('else');">
+								<tr>
+									<td>
+										<img src="img/icon/folder/folder_4.png">
+									</td>
+								</tr>
+								<tr>
+									<th>
+										ELSE
+									</th>	
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	
+	<table id="plusCateTbl">
+		<tr>
+			<td>
+				<input id="plusCate">
+			</td>
+			<td>
+				<button>등록</button>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

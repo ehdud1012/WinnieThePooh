@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table id="loginPage">
+	<form action="login.do" name="loginForm" onsubmit="return loginCheck(this);"
+		method="post" enctype="multipart/form-data">
+			<tr>
+				<td align="center">
+					<input name="id" placeholder="아이디">
+				</td>
+			</tr>
+			<tr>
+				<td align="center">
+					<input name="pw" placeholder="비번">
+				</td>
+			</tr>
+			<tr>
+				<td align="center">
+					<button>로그인</button>
+	</form>
+					<button onclick="joinGo();">회원가입</button>
+				</td>
+			</tr>
+		</table>
+</body>
+</html>
